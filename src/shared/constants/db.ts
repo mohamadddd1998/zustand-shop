@@ -1,0 +1,143 @@
+export const products = [
+  {
+    id: 1,
+    title: "کفش اسپرت مردانه",
+    price: 850000,
+    priceLabel: "850.000 تومان",
+    image: "Sh_4",
+    liked: false,
+    stock: 12,
+    category: "sport",
+    description: "کفش اسپرت مردانه با کیفیت بالا و مناسب استفاده روزمره.",
+    createdAt: "2026-05-19T10:00:00.000Z",
+  },
+  {
+    id: 2,
+    title: "کفش اسپرت زنانه",
+    price: 950000,
+    priceLabel: "950.000 تومان",
+    image: "Sh_2",
+    liked: false,
+    stock: 8,
+    category: "sport",
+    description: "کفش اسپرت زنانه سبک، راحت و مناسب پیاده‌روی.",
+    createdAt: "2026-05-19T10:00:00.000Z",
+  },
+  {
+    id: 3,
+    title: "کفش روزمره",
+    price: 950000,
+    priceLabel: "950.000 تومان",
+    image: "Sh_3",
+    liked: false,
+    stock: 15,
+    category: "casual",
+    description: "کفش روزمره مناسب استایل‌های ساده و راحت.",
+    createdAt: "2026-05-19T10:00:00.000Z",
+  },
+  {
+    id: 4,
+    title: "کفش راحتی",
+    price: 950000,
+    priceLabel: "950.000 تومان",
+    image: "Sh_1",
+    liked: false,
+    stock: 9,
+    category: "comfort",
+    description: "کفش راحتی مناسب استفاده طولانی‌مدت و روزانه.",
+    createdAt: "2026-05-19T10:00:00.000Z",
+  },
+  {
+    id: 5,
+    title: "کفش کوهنوردی",
+    price: 1480000,
+    priceLabel: "1.480.000 تومان",
+    image: "Sh_5",
+    liked: false,
+    stock: 4,
+    category: "hiking",
+    description: "کفش مقاوم و حرفه‌ای برای کوهنوردی و طبیعت‌گردی.",
+    createdAt: "2026-05-19T10:00:00.000Z",
+  },
+  {
+    id: 6,
+    title: "کفش اسپرت حرفه‌ای",
+    price: 1250000,
+    priceLabel: "1.250.000 تومان",
+    image: "Sh_6",
+    liked: false,
+    stock: 6,
+    category: "sport",
+    description: "کفش اسپرت حرفه‌ای با طراحی مدرن و راحت.",
+    createdAt: "2026-05-19T10:00:00.000Z",
+  },
+  {
+    id: 7,
+    title: "کفش رانینگ",
+    price: 1300000,
+    priceLabel: "1.300.000 تومان",
+    image: "Sh_7",
+    liked: false,
+    stock: 7,
+    category: "running",
+    description: "کفش مناسب دویدن و فعالیت‌های ورزشی.",
+    createdAt: "2026-05-19T10:00:00.000Z",
+  },
+];
+export const hero = {
+  id: 1,
+  title: "لندینگ پیج قالب شــوول",
+  subtitle: "بهترین کفش، بهترین قیمت",
+  image: "Sh_3",
+};
+export const users = [
+  {
+    id: 1,
+    name: "کاربر تست",
+    email: "test@example.com",
+    password: "123456",
+    avatar: "img/users/user-1.png",
+    role: "user",
+    createdAt: "2026-05-19T10:00:00.000Z",
+  },
+  {
+    id: 2,
+    name: "ادمین",
+    email: "admin@example.com",
+    password: "admin123",
+    avatar: "img/users/user-2.png",
+    role: "admin",
+    createdAt: "2026-05-19T10:00:00.000Z",
+  },
+];
+
+ export const menu= [
+    {
+      "id": 1,
+      "title": "صفحه اصلی",
+      "link": "index.html",
+      "order": 1,
+      "parentId": null
+    },
+    {
+      "id": 3,
+      "title": "درباره ما",
+      "link": "page.html",
+      "order": 3,
+      "parentId": null
+    },
+    {
+      "id": 4,
+      "title": "تماس با ما",
+      "link": "contact.html",
+      "order": 4,
+      "parentId": null
+    },
+    {
+      "id": 5,
+      "title": "سوالات متداول",
+      "link": "faq.html",
+      "order": 5,
+      "parentId": null
+    }
+  ]

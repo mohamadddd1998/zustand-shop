@@ -1,0 +1,227 @@
+{
+  "site": {
+    "id": 1,
+    "title": "Shoel",
+    "slogan": "بهترین کفش، بهترین قیمت",
+    "description": "یک تجربه خرید به یاد ماندنی",
+    "logoText": "محل نمایش لوگو",
+    "heroTitle": "لندینگ پیج قالب شــوول",
+    "heroSubtitle": "بهترین کفش، بهترین قیمت",
+    "ctaTitle": "لندینگ شــوول",
+    "ctaSubtitle": "یک تجربه خرید به یاد ماندنی",
+    "ctaLinkText": "نیاز به استعلام قیمت داری؟",
+    "ctaLink": "#",
+    "footerText": "طراحی سایت توسط سئو نود",
+    "footerAuthor": "سئو نود",
+    "footerAuthorLink": "https://seo90.ir"
+  },
+
+  "users": [
+    {
+      "id": 1,
+      "name": "کاربر تست",
+      "email": "test@example.com",
+      "password": "123456",
+      "avatar": "img/users/user-1.png",
+      "role": "user",
+      "createdAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "ادمین",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "avatar": "img/users/user-2.png",
+      "role": "admin",
+      "createdAt": "2026-05-19T10:00:00.000Z"
+    }
+  ],
+
+  "auth": {
+    "id": 1,
+    "isLoggedIn": false,
+    "currentUserId": null,
+    "token": null
+  },
+
+  "menu": [
+    {
+      "id": 1,
+      "title": "صفحه اصلی",
+      "link": "index.html",
+      "order": 1,
+      "parentId": null
+    },
+    {
+      "id": 3,
+      "title": "درباره ما",
+      "link": "page.html",
+      "order": 3,
+      "parentId": null
+    },
+    {
+      "id": 4,
+      "title": "تماس با ما",
+      "link": "contact.html",
+      "order": 4,
+      "parentId": null
+    },
+    {
+      "id": 5,
+      "title": "سوالات متداول",
+      "link": "faq.html",
+      "order": 5,
+      "parentId": null
+    }
+  ],
+
+  "hero": {
+    "id": 1,
+    "title": "لندینگ پیج قالب شــوول",
+    "subtitle": "بهترین کفش، بهترین قیمت",
+    "image": "Sh_3"
+  },
+
+  "products": [
+    {
+      "id": 1,
+      "title": "کفش اسپرت مردانه",
+      "price": 850000,
+      "priceLabel": "850.000 تومان",
+      "image": "Sh_4",
+      "liked": false,
+      "stock": 12,
+      "category": "sport",
+      "description": "کفش اسپرت مردانه با کیفیت بالا و مناسب استفاده روزمره.",
+      "createdAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "کفش اسپرت زنانه",
+      "price": 950000,
+      "priceLabel": "950.000 تومان",
+      "image": "Sh_2",
+      "liked": false,
+      "stock": 8,
+      "category": "sport",
+      "description": "کفش اسپرت زنانه سبک، راحت و مناسب پیاده‌روی.",
+      "createdAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "title": "کفش روزمره",
+      "price": 950000,
+      "priceLabel": "950.000 تومان",
+      "image": "Sh_3",
+      "liked": false,
+      "stock": 15,
+      "category": "casual",
+      "description": "کفش روزمره مناسب استایل‌های ساده و راحت.",
+      "createdAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "title": "کفش راحتی",
+      "price": 950000,
+      "priceLabel": "950.000 تومان",
+      "image": "Sh_1",
+      "liked": false,
+      "stock": 9,
+      "category": "comfort",
+      "description": "کفش راحتی مناسب استفاده طولانی‌مدت و روزانه.",
+      "createdAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "title": "کفش کوهنوردی",
+      "price": 1480000,
+      "priceLabel": "1.480.000 تومان",
+      "image": "Sh_5",
+      "liked": false,
+      "stock": 4,
+      "category": "hiking",
+      "description": "کفش مقاوم و حرفه‌ای برای کوهنوردی و طبیعت‌گردی.",
+      "createdAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "title": "کفش اسپرت حرفه‌ای",
+      "price": 1250000,
+      "priceLabel": "1.250.000 تومان",
+      "image": "Sh_6",
+      "liked": false,
+      "stock": 6,
+      "category": "sport",
+      "description": "کفش اسپرت حرفه‌ای با طراحی مدرن و راحت.",
+      "createdAt": "2026-05-19T10:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "title": "کفش رانینگ",
+      "price": 1300000,
+      "priceLabel": "1.300.000 تومان",
+      "image": "Sh_7",
+      "liked": false,
+      "stock": 7,
+      "category": "running",
+      "description": "کفش مناسب دویدن و فعالیت‌های ورزشی.",
+      "createdAt": "2026-05-19T10:00:00.000Z"
+    }
+  ],
+
+  "favorites": [
+    {
+      "id": 1,
+      "userId": 1,
+      "productId": 2,
+      "createdAt": "2026-05-19T10:05:00.000Z"
+    }
+  ],
+
+  "cart": [
+    {
+      "id": 1,
+      "userId": 1,
+      "productId": 1,
+      "quantity": 2,
+      "createdAt": "2026-05-19T10:06:00.000Z"
+    }
+  ],
+
+  "orders": [
+    {
+      "id": 1,
+      "userId": 1,
+      "items": [
+        {
+          "productId": 1,
+          "title": "کفش اسپرت مردانه",
+          "quantity": 2,
+          "price": 850000
+        }
+      ],
+      "total": 1700000,
+      "status": "pending",
+      "paymentStatus": "unpaid",
+      "createdAt": "2026-05-19T10:10:00.000Z"
+    }
+  ],
+
+  "notifications": [
+    {
+      "id": 1,
+      "type": "discount",
+      "title": "تخفیف ویژه",
+      "message": "برای برخی محصولات تخفیف ویژه فعال است.",
+      "isRead": false,
+      "createdAt": "2026-05-19T10:00:00.000Z"
+    }
+  ],
+
+  "settings": {
+    "theme": "light",
+    "currency": "IRR",
+    "rtl": true,
+    "lang": "fa"
+  }
+}
