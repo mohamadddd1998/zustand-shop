@@ -1,16 +1,22 @@
 import { useLoginStore } from "@/features/login/store/useLoginStore";
 import { useProductsStore } from "@/features/products/store/useProductsStore";
 import type { CartItem, Product } from "@/shared/types";
+import toast from "react-hot-toast";
 import { create } from "zustand";
 import { useShallow } from "zustand/shallow";
 
 interface CartStoreState {
   cartItems: CartItem[];
   addToCart: (productId: number) => void;
+  deleteFromCart: (productId: number) => void;
 }
 
 export const useCartStore = create<CartStoreState>((set) => ({
   cartItems: [],
+  deleteFromCart: (productId) =>
+    set((state) => ({
+      cartItems: state.cartItems.filter((c) => c.productId != productId),
+    })),
   addToCart: (productId: number) =>
     set((state) => {
       const user = useLoginStore.getState().user;
@@ -23,6 +29,7 @@ export const useCartStore = create<CartStoreState>((set) => ({
       const isExistProduct = state.cartItems.find(
         (cartItem: CartItem) => cartItem.productId === productId,
       );
+      toast.success("به سبد خرید اضافه شد.");
 
       if (isExistProduct)
         return {
@@ -58,5 +65,6 @@ export const useCartActions = () =>
   useCartStore(
     useShallow((state) => ({
       addToCart: state.addToCart,
+      deleteFromCart: state.deleteFromCart,
     })),
   );

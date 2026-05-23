@@ -1,8 +1,10 @@
 import type { CartItem } from "@/shared/types";
-import { useCartItems } from "../stroe/useCartSrore";
+import { useCartActions, useCartItems } from "../stroe/useCartSrore";
+import { Trash } from "lucide-react";
 
 const CartTable = () => {
   const cartItems = useCartItems();
+  const { deleteFromCart } = useCartActions();
 
   return (
     <div className="overflow-x-auto shadow-md rounded-lg">
@@ -12,6 +14,7 @@ const CartTable = () => {
             <th className="px-6 py-3">محصول</th>
             <th className="px-6 py-3 text-center">تعداد</th>
             <th className="px-6 py-3 text-right">قیمت</th>
+            <th className="px-6 py-3 text-right"></th>
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-200">
@@ -19,7 +22,7 @@ const CartTable = () => {
             <tr className="bg-white hover:bg-gray-50 transition-colors">
               <td
                 className="px-6 py-4 font-medium text-gray-900 text-center"
-                colSpan={3}
+                colSpan={4}
               >
                 محصولی برای نمایش وجود ندارد.
               </td>
@@ -36,6 +39,14 @@ const CartTable = () => {
                 <td className="px-6 py-4 text-center">{item.quantity}</td>
                 <td className="px-6 py-4 text-right">
                   {item.product.priceLabel}
+                </td>
+                <td className="px-6 py-4 text-right">
+                  <button
+                    className="text-red-500 cursor-pointer"
+                    onClick={() => deleteFromCart(item.productId)}
+                  >
+                    <Trash size={18} />
+                  </button>
                 </td>
               </tr>
             ))
