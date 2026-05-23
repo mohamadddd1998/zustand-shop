@@ -1,73 +1,58 @@
-# React + TypeScript + Vite
+# 🛍️ فروشگاه آنلاین تمرینی (Zustand State Management)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+این پروژه یک فروشگاه آنلاین ساده و تمرینی است که با هدف نمایش پیاده‌سازی مدیریت وضعیت (State Management) با استفاده از کتابخانه محبوب **Zustand** توسعه داده شده است. هسته اصلی این پروژه بر پایه Zustand بنا شده و امکاناتی مانند سبد خرید، لیست علاقه‌مندی‌ها، نمایش محصولات و مدیریت ورود/خروج کاربران را ارائه می‌دهد.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🎯 اهداف پروژه
+- **نمایش قدرت Zustand:** پیاده‌سازی کامل سناریوهای پیچیده مدیریت وضعیت (مانند سبد خرید و علاقه‌مندی‌ها) با Zustand.
+- **مدیریت وضعیت ساده و مقیاس‌پذیر:** نشان دادن سادگی و انعطاف‌پذیری Zustand برای پروژه‌های کوچک و متوسط.
+- **تجربه کاربری (UX) کامل:** ارائه امکانات ضروری یک فروشگاه آنلاین (نمایش محصول، سبد خرید، علاقه‌مندی‌ها، احراز هویت).
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 ویژگی‌های اصلی
+*   **سبد خرید (Shopping Cart):** افزودن/حذف محصولات، به‌روزرسانی تعداد، محاسبه مجموع.
+*   **لیست علاقه‌مندی‌ها (Wishlist):** امکان ذخیره محصولات مورد علاقه.
+*   **لیست محصولات:** نمایش لیست محصولات (که با دیتای Mock ارائه شده‌اند).
+*   **احراز هویت (Auth):** ورود و خروج ساده کاربران.
+*   **مدیریت وضعیت با Zustand:** تمام منطق مربوط به سبد خرید، علاقه‌مندی‌ها، لیست محصولات و اطلاعات کاربر در یک Store مرکزی Zustand مدیریت می‌شود.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠 تکنولوژی‌های استفاده شده
+*   **Frontend Framework:** React (یا هر فریمورکی که استفاده کردید، مثلاً Next.js)
+*   **State Management:** **Zustand** (هسته اصلی پروژه)
+*   **Styling:** Tailwind CSS 
+*   **Routing:** React Router
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 💡 چرا Zustand؟
+در این پروژه، Zustand به دلایل زیر انتخاب شده است:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **سادگی و حجم کم:** Zustand یک کتابخانه سبک با API بسیار ساده است که یادگیری و پیاده‌سازی آن سریع است.
+- **عملکرد بالا:** Zustand به‌طور پیش‌فرض بهینه‌سازی شده و از رندر شدن‌های غیرضروری جلوگیری می‌کند.
+- **انعطاف‌پذیری:** به راحتی می‌توان Storeهای مجزا برای بخش‌های مختلف (مانند `cartStore`, `wishlistStore`, `authStore`) تعریف کرد یا یک Store بزرگتر داشت.
+- **عدم نیاز به Context API:** برخلاف React Context، Zustand نیازی به Provider در ریشه برنامه ندارد و دسترسی به State از هر جایی آسان است.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 راهنمای اجرای پروژه
+برای اجرای این پروژه در سیستم خود:
+```bash
+# 1. کلون کردن ریپازیتوری
+git clone <URL-پروژه-شما>
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# 2. ورود به پوشه پروژه
+cd <نام-پوشه-پروژه>
+
+# 3. نصب وابستگی‌ها (اگر از npm استفاده می‌کنید)
+npm install
+# یا اگر از yarn استفاده می‌کنید:
+# yarn install
+
+# 4. اجرای پروژه (مثال برای Vite/React)
+npm run dev
+# یا
+# yarn dev
